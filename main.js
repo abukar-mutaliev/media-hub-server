@@ -7,17 +7,8 @@ const sequelize = require("./db/db");
 const router = require("./routes/index");
 const errorHandler = require("./middlewares/errorHandlingMiddleware");
 
-console.log("PORT:", process.env.PORT);
-console.log("DB_USER:", process.env.DB_USER);
-console.log("DB_PASSWORD:", process.env.DB_PASSWORD);
-console.log("DB_HOST:", process.env.DB_HOST);
-console.log("DB_PORT:", process.env.DB_PORT);
-console.log("DB_NAME:", process.env.DB_NAME);
-console.log("DB_DIALECT:", process.env.DB_DIALECT);
-console.log("SECRET_KEY:", process.env.SECRET_KEY);
-
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.SERVER_PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
